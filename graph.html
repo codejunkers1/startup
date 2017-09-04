@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>  
+ <title>Basic HTML5 Column Chart </title>
+  <script type="text/javascript">
+  window.onload = function () {
+    var chart = new CanvasJS.Chart("chartContainer",
+    {
+      title:{
+        text: "Ecomerce Growth"    
+      },
+      animationEnabled: true,
+      axisY: {
+        title: "Reserves(MMbbl)"
+      },
+      legend: {
+        verticalAlign: "bottom",
+        horizontalAlign: "center"
+      },
+      theme: "theme2",
+      data: [
+
+      {        
+        type: "column",  
+        showInLegend: true, 
+        legendMarkerColor: "grey",
+        legendText: "MMbbl = one million barrels",
+        dataPoints: [      
+        {y: 1007571, label: "Amazon"},
+        {y: 967017,  label: "Flipkart" },
+        {y: 875200,  label: "Snapdeal"},
+        {y: 754580,  label: "Ebay"},
+        {y: 616000,  label: "Paytm"},
+        {y: 597800, label: "Myntra"},
+        {y: 450682,  label: "Shopclues"},        
+        {y: 220350,  label: "Smartprice"}        
+        ]
+      }   
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="canvasjs.min.js"></script>
+</head>
+  <body>
+  <div id="chartContainer" style="height: 300px; width: 100%;">
+    </div>
+  </body>
+</html>
